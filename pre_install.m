@@ -91,6 +91,10 @@ function retval = pre_install (install_data)
   mkoctfile signal_uwb_pulse.cpp uwb_toolbox_utils.cpp util_interp_fields.cpp uwb_lt102_lt103_data.cpp
   printf("Done \n");
 
+  printf("Making Correlation kernels...\n");
+  mkoctfile signal_build_correlation_kernel.cpp uwb_toolbox_utils.cpp
+  printf("Done \n");
+
   printf("Making signal_clock_phase_noise...\n");
   mkoctfile signal_clock_phase_noise.cpp uwb_toolbox_utils.cpp
   printf("Done \n");
@@ -109,6 +113,10 @@ function retval = pre_install (install_data)
 
   printf("Making Down Conversion...\n");
   mkoctfile signal_downconvert.cpp uwb_toolbox_utils.cpp
+  printf("Done \n");
+
+  printf("Making ADC Conversion...\n");
+  mkoctfile signal_adcconvert.cpp uwb_toolbox_utils.cpp
   printf("Done \n");
 
   printf("-----------------------------------\n");
